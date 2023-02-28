@@ -1,38 +1,78 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #3c3a3a;
+  color: #ddd;
+}
+main {
+  max-width: 360px;
+  margin: 25px auto;
+}
+h1 {
   text-align: center;
+  color: #fff;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-top: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  width: 100%;
+  background-color: transparent;
+  color: rgb(9, 7, 7);
+  border: 2px solid rgb(9, 7, 7);
+  padding: 2px 5px;
+  border-radius: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form input[type="datetime-local"] {
+  color: rgb(168, 168, 168);
+}
+::placeholder {
+  color: rgb(168, 168, 168);
+}
+form div.basic {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  margin-bottom: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+form button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgb(168, 168, 168);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.transactions {
+  margin-top: 10px;
+}
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 1px solid #1d1d23;
+}
+div.transaction:first-child {
+  border-top: 0;
+}
+div.transaction div.name {
+  font-size: 1rem;
+}
+div.transaction div.description {
+  font-size: 0.9rem;
+  color: rgb(168, 168, 168);
+}
+div.right {
+  text-align: right;
+}
+div.price.green {
+  color: rgb(61, 204, 61);
+}
+div.price.red {
+  color: rgb(230, 14, 14);
+}
+div.transaction div.datetime {
+  font-size: 0.9rem;
+  color: rgb(168, 168, 168);
 }
